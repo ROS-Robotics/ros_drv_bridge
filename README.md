@@ -1,1 +1,5 @@
-# ros_drv_bridge
+# ROS_Drv_Bridge 程序介绍
+
+通用底盘控制系统与ROS系统之间数据交换程序
+
+bridge 程序是通过串行接口在通用底盘控制系统和上层ROS 系统之间搭建的一座桥梁。
