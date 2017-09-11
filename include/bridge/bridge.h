@@ -27,6 +27,9 @@
 #define Pos_X command_long_msg.param4
 #define Pos_Y command_long_msg.param3
 
+#define Wheel_distance 0.25
+
+
 
 
 #endif /* BRIDGE_INCLUDE_BRIDGE_BRIDGE_H_ */
