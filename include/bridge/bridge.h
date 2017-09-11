@@ -27,7 +27,7 @@
 #define Pos_X command_long_msg.param4
 #define Pos_Y command_long_msg.param3
 
-#define Wheel_distance 0.25
+#define Wheel_distance 0.5
 
 
 
