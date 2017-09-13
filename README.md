@@ -1,4 +1,7 @@
 # ROS_Drv_Bridge 程序介绍
+Platform 	            Build Status
+Ubuntu14.04/ROS indigo	Build Status
+Ubuntu16.04/ROS kinetic	Build status
 
 Robot Drive-Kit 与 ROS系统之间数据交换程序
 
