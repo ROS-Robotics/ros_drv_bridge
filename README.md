@@ -12,11 +12,11 @@ bridge 程序是通过串行接口在Robot Drive-Kit 和上层ROS 系统之间�
 
 ### 1 创建工作空间：
 
-$ mkdir -p ~/catkin_ws/src
+      $ mkdir -p ~/catkin_ws/src
 
-$ cd ~/catkin_ws/
+      $ cd ~/catkin_ws/
 
-$ catkin_make
+      $ catkin_make
 
 ### 2 下载程序：
 
