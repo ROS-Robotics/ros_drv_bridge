@@ -18,7 +18,7 @@ $ cd ~/catkin_ws/
 
 $ catkin_make
 
-### ２　下载程序：
+### 2 下载程序：
 
 $ cd src
 
@@ -28,7 +28,7 @@ $ cd ..
 
 $ catkin_make
 
-### 3 修改串口权限：
+### 3 配置串口权限：
 
 $ cd
 
@@ -36,7 +36,7 @@ $ cd /dev
 
 $ sudo chmod 666 ttyUSB0(默认值)
 
-### ４　启动程序
+### 4 启动程序：
 
 $ source ~/catkin_ws/devel/setup.bash
 
