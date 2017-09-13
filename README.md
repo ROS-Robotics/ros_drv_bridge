@@ -20,27 +20,27 @@ bridge 程序是通过串行接口在Robot Drive-Kit 和上层ROS 系统之间�
 
 ### 2 下载程序：
 
-$ cd src
+      $ cd src
 
-$ git clone https://github.com/ROS-Robotics/ros_drv_bridge.git
+      $ git clone https://github.com/ROS-Robotics/ros_drv_bridge.git
 
-$ cd ..
+      $ cd ..
 
-$ catkin_make
+      $ catkin_make
 
 ### 3 配置串口权限：
 
-$ cd
+      $ cd
 
-$ cd /dev
+      $ cd /dev
 
-$ sudo chmod 666 ttyUSB0(默认值)
+      $ sudo chmod 666 ttyUSB0(默认值)
 
 ### 4 启动程序：
 
-$ source ~/catkin_ws/devel/setup.bash
+      $ source ~/catkin_ws/devel/setup.bash
 
-$ roslaunch ros_drv_bridge bridge_node.launch
+      $ roslaunch ros_drv_bridge bridge_node.launch
 
 
 
