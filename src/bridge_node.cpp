@@ -485,18 +485,19 @@ void callback(const geometry_msgs::Twist& cmd_vel)
     ROS_INFO("Angular Components:[%f,%f,%f]",cmd_vel.angular.x,cmd_vel.angular.y,cmd_vel.angular.z);
 */
    linear_x_speed = (int16_t)(1000*cmd_vel.linear.x);
-    if(linear_x_speed>-80 && linear_x_speed<-1) linear_x_speed = -80;
-    if(linear_x_speed>1 && linear_x_speed< 80) linear_x_speed =   80;
+    if(linear_x_speed>-10 && linear_x_speed<-1) linear_x_speed = -10;
+    if(linear_x_speed>1 && linear_x_speed< 10) linear_x_speed =   10;
 
     angular_speed = (int16_t)(1000*cmd_vel.angular.z);
 
-    if(angular_speed>-350 && angular_speed<-1) angular_speed = -350;
-    if(angular_speed> 1 && angular_speed < 350) angular_speed = 350;
+    if(angular_speed>-50 && angular_speed<-1) angular_speed = -50;
+    if(angular_speed> 1 && angular_speed < 50) angular_speed = 50;
 
 
     payload_pointer = (uint16_t *)msg.payload64;
     *payload_pointer     = linear_x_speed ;
     *(payload_pointer+3) = angular_speed;
+    *(payload_pointer+4) = Wheel_distance;
     static uint8_t mavlink_crcs[] = MAVLINK_MESSAGE_CRCS;
     mavlink_finalize_message_chan(&msg, msg.sysid, msg.compid, MAVLINK_COMM_0, msg.len, mavlink_crcs[msg.msgid]);
     static uint8_t buffer[MAVLINK_MAX_PACKET_LEN];
