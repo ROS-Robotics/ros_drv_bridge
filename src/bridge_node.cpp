@@ -497,7 +497,7 @@ void callback(const geometry_msgs::Twist& cmd_vel)
     payload_pointer = (uint16_t *)msg.payload64;
     *payload_pointer     = linear_x_speed ;
     *(payload_pointer+3) = angular_speed;
-    *(payload_pointer+4) = Wheel_distance;
+    *(payload_pointer+4) = (int16_t)(Wheel_distance*1000);
     static uint8_t mavlink_crcs[] = MAVLINK_MESSAGE_CRCS;
     mavlink_finalize_message_chan(&msg, msg.sysid, msg.compid, MAVLINK_COMM_0, msg.len, mavlink_crcs[msg.msgid]);
     static uint8_t buffer[MAVLINK_MAX_PACKET_LEN];
