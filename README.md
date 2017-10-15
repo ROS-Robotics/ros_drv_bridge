@@ -1,7 +1,9 @@
 # ROS_Drv_Bridge 程序介绍
 
 
-Robot Drive-Kit 与 ROS系统之间数据交换程序
+Robot Drive-Kit(驱动套件) 与 ROS系统之间数据交换程序
+
+我们把上层 ROS 系统与底盘的嵌入式系统通信功能的程序包从 /SRC 一体化程序包中单独提出来，用户根据自己系统的需求可以单独使用。
 
 bridge 程序是通过串行接口在Robot Drive-Kit 和上层ROS 系统之间搭建的一座桥梁。
 
