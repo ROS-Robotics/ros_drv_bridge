@@ -484,14 +484,14 @@ void callback(const geometry_msgs::Twist& cmd_vel)
     ROS_INFO("Linear Components:[%f,%f,%f]",cmd_vel.linear.x,cmd_vel.linear.y,cmd_vel.linear.z);
     ROS_INFO("Angular Components:[%f,%f,%f]",cmd_vel.angular.x,cmd_vel.angular.y,cmd_vel.angular.z);
 */
-   linear_x_speed = (int16_t)(1000*cmd_vel.linear.x);
-    if(linear_x_speed>-10 && linear_x_speed<-1) linear_x_speed = -10;
-    if(linear_x_speed>1 && linear_x_speed< 10) linear_x_speed =   10;
+   linear_x_speed = (int16_t)(680*cmd_vel.linear.x);
+    if(linear_x_speed>-5 && linear_x_speed<-1) linear_x_speed = -5;
+    if(linear_x_speed>1 && linear_x_speed< 5) linear_x_speed =   5;
 
-    angular_speed = (int16_t)(1000*cmd_vel.angular.z);
+    angular_speed = (int16_t)(680*cmd_vel.angular.z);
 
-    if(angular_speed>-50 && angular_speed<-1) angular_speed = -50;
-    if(angular_speed> 1 && angular_speed < 50) angular_speed = 50;
+    if(angular_speed>-5 && angular_speed<-1) angular_speed = -5;
+    if(angular_speed> 1 && angular_speed < 5) angular_speed = 5;
 
 
     payload_pointer = (uint16_t *)msg.payload64;
